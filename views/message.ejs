@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<title> <%= title %></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+    <!-- <%- include ('./partials/nav') %> -->
+    <div class="w3-container">
+        <h2><%= title %></h2>
+
+        <table class="w3-table-all w3-hoverable ">
+            <thead>
+                <tr class="w3-red">
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <% Messages.forEach((Msg)=>{ %>
+            <tr>
+                <td><%= Msg.Name %></td>
+                <td><%= Msg.Email %></td>
+                <td><%= Msg.Message %></td>
+            </tr>
+            <% }) %>
+        </table>
+    </div>
+
+</body>
+
+</html>
